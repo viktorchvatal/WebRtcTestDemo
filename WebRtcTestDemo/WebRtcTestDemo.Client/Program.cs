@@ -11,15 +11,14 @@ internal class Program
         // Load test video buffer (encoded blue frame as H264)
         byte[] buffer = Helpers.LoadTestBuffer();
 
-        string[] streamNames = ["stream1"];
-        // string[] streamNames = ["stream1", "stream2", "stream3", "stream4", "stream5"];
+        List<string> streamNames = Enumerable.Range(0, 20).Select(x => x.ToString()).ToList();
 
         foreach (string streamName in streamNames)
         {
             StartClient(streamName, buffer);
         }
 
-        // Keep clients running
+        // Keep demo running
         while (true)
         {
             await Task.Delay(1000);
