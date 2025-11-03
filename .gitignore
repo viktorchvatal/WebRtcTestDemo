@@ -1,0 +1,11 @@
+.idea/
+.vs/
+[Bb]in/
+[Oo]bj/
+node_modules/
+
+[Ll]ogs/
+
+*.log
+*.user
+*.bkp
